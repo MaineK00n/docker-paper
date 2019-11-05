@@ -1,9 +1,9 @@
-name: Lint
+name: Lint & Release
 
 on: 
   push:
     branches:
-      - '!master'
+      - 'master'
 
 jobs:
   build:
@@ -13,5 +13,11 @@ jobs:
       - uses: actions/checkout@v1
       - name: Build the Docker image
         run: docker-compose build textlint
-      - name: lint
+      - name: Lint
         run: docker-compose run --rm textlint npm run --silent textlint-check
+      - name: Release
+        uses: MaineK00n/latex-actions@v1.0.0
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          repository: MaineK00n/docker-paper
+          pdf_name: docker-paper
