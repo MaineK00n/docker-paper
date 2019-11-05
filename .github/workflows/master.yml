@@ -16,7 +16,7 @@ jobs:
       - name: Lint
         run: docker-compose run --rm textlint npm run --silent textlint-check
       - name: Release
-        uses: MaineK00n/latex-actions@v1.0.2
+        uses: MaineK00n/latex-actions@v0.0.1
         with:
           root_tex: main.tex
           token: ${{ secrets.GITHUB_TOKEN }}
