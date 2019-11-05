@@ -7,51 +7,7 @@
             "rulePaths": [
                 "./prh.yml"
             ]
-        },
-        "preset-ja-technical-writing": {
-            "spellcheck-tech-word": true,
-            "ja-no-mixed-period": false,
-            "sentence-length": {
-                "max": 100
-            },
-            "max-comma": {
-                "max": 3
-            },
-            "max-kanji-continuous-len": { // 連続漢字長
-                "max": 6,
-                "allow": [
-                    "故障検出能力低下問題",
-                    "故障検出確率評価"
-                ]
-            },
-            "arabic-kanji-numbers": true, // 漢数字と算用数字の使い分け
-            "no-mix-dearu-desumasu": { // 「ですます調」と「である調」
-                "preferInHeader": "", // + 見出し   : 自動
-                "preferInBody": "ですます", // + 本文     : ですます調
-                "preferInList": "である", // + 箇条書き : である調
-                "strict": false // + 文末以外のチェックをしない
-            },
-            "no-double-negative-ja": true, // 二重否定は使用しない
-            "no-dropping-the-ra": true, // ら抜き言葉を使用しない
-            "no-doubled-conjunctive-particle-ga": true, // 逆接の接続助詞「が」を連続して使用しない
-            "no-doubled-conjunction": true, // 同じ接続詞を連続して使用しない
-            "no-doubled-joshi": { // 同じ助詞を連続して使用しない
-                "min_interval": 1
-            },
-            "no-nfd": true, // UTF8-MAC 濁点を使用しない
-            "no-exclamation-question-mark": { // 感嘆符「!！?？」の使用
-                "allowHalfWidthExclamation": false, // + 半角!
-                "allowFullWidthExclamation": false, // + 全角！
-                "allowHalfWidthQuestion": false, // + 半角?
-                "allowFullWidthQuestion": true // + 全角？
-            },
-            "no-hankaku-kana": true, // 半角カナを使用しない
-            "ja-no-weak-phrase": true, // 弱い日本語表現の利用を使用しない
-            "ja-no-successive-word": true, // 同一の単語の連続チェック
-            "ja-no-abusage": true, // よくある日本語の誤用のチェック
-            "ja-no-redundant-expression": true
-        },
-        "preset-ja-spacing": true
+        }
     },
     "filters": {
         "comments": true,
