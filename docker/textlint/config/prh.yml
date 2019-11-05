@@ -1,0 +1,13 @@
+# prh version
+version: 1
+rules:
+    # 句読点
+    - expected: ", "
+      patterns:
+          - "、"
+          - "，"
+
+    - expected: ". "
+      patterns: 
+          - "。"
+          - "．"
