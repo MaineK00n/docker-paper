@@ -6,15 +6,20 @@ on:
       - 'master'
 
 jobs:
-  build:
+  lint:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v1
       - name: Build the Docker image
         run: docker-compose build textlint
       - name: Lint
         run: docker-compose run --rm textlint npm run --silent textlint-check
+
+  release:
+    runs-on: ubuntu-latest
+    needs: lint
+    steps:
+      - uses: actions/checkout@v1
       - name: Release
         uses: MaineK00n/latex-actions@v0.0.1
         with:
