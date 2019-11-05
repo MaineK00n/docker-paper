@@ -18,7 +18,7 @@ jobs:
       - name: Release
         uses: MaineK00n/latex-actions@v0.0.1
         with:
-          root_tex: main.tex
+          root: app/src/main.tex
           token: ${{ secrets.GITHUB_TOKEN }}
           repository: MaineK00n/docker-paper
           pdf_name: docker-paper
