@@ -1,8 +1,8 @@
 TITLE = main
-TOPDIR = ./app/
-SRCDIR = ${TOPDIR}src/
-BUILDDIR = ${TOPDIR}src/
-F = ${BUILDDIR}${TITLE}
+TOPDIR = ./app
+SRCDIR = ${TOPDIR}/src
+BUILDDIR = ${TOPDIR}/build
+F = ${BUILDDIR}/${TITLE}
 PDFVIEWER = evince
 
 all:
@@ -29,11 +29,9 @@ lint:
 	docker-compose run --rm textlint npm run --silent textlint-check
 
 clean: down
-	@if [ -f "$F.pdf" ]; then\
-    	rm -rf $(shell ls $F.* | grep -v -E '$F.(tex|pdf)'); \
-	fi
-	@if [ -d "${SRCDIR}auto" ]; then\
-    	rm -rf ${SRCDIR}auto; \
+	@rm -rf $(shell find ${BUILDDIR} -type f | grep -v -E '.gitkeep')
+	@if [ -d "${SRCDIR}/auto" ]; then\
+    	rm -rf ${SRCDIR}/auto; \
 	fi
 
 all-clean: clean
