@@ -15,7 +15,7 @@
         "prh": "^5.4.4",
         "textlint-filter-rule-comments": "^1.2.2",
         "textlint-filter-rule-whitelist": "^2.0.0",
-        "textlint-plugin-latex2e": "^0.3.0",
+        "textlint-plugin-latex2e": "^1.0.0",
         "textlint-rule-prh": "^5.2.0"
     }
 }
