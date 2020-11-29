@@ -1,0 +1,28 @@
+version: 2
+updates:
+- package-ecosystem: docker
+  directory: "/docker/textlint"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  reviewers:
+  - MaineK00n
+- package-ecosystem: npm
+  directory: "/docker/textlint"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  reviewers:
+  - MaineK00n
+- package-ecosystem: docker
+  directory: "/docker/texlive"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
+  reviewers:
+  - MaineK00n
+- package-ecosystem: github-actions
+  directory: "/"
+  schedule:
+    interval: daily
+  open-pull-requests-limit: 10
